@@ -49,7 +49,7 @@ final class InvoiceEmailSenderSpec extends ObjectBehavior
         $filePath = sys_get_temp_dir() . '/' . 'invoice-0000001.pdf';
 
         $templatingEngine->render(
-            '@SyliusInvoicingPlugin/Resources/views/Invoice/Download/pdf.html.twig', [
+            '@SyliusInvoicingPlugin/Invoice/Download/pdf.html.twig', [
                 'invoice' => $invoice
             ]
         )->willReturn($templateReference);

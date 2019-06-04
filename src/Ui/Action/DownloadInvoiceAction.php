@@ -36,7 +36,7 @@ final class DownloadInvoiceAction
         $filename = sprintf('invoice-%s.pdf', $id);
 
         $response = new Response($this->pdfGenerator->getOutputFromHtml(
-            $this->templatingEngine->render('@SyliusInvoicingPlugin/Resources/views/Invoice/Download/pdf.html.twig', [
+            $this->templatingEngine->render('@SyliusInvoicingPlugin/Invoice/Download/pdf.html.twig', [
                 'invoice' => $this->invoiceRepository->get($id),
             ])
         ));

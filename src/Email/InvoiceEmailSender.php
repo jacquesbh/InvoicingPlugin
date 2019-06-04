@@ -41,7 +41,7 @@ final class InvoiceEmailSender implements InvoiceEmailSenderInterface
         string $customerEmail
     ): void {
         $pdfFileContent = $this->pdfGenerator->getOutputFromHtml(
-            $this->templatingEngine->render('@SyliusInvoicingPlugin/Resources/views/Invoice/Download/pdf.html.twig', [
+            $this->templatingEngine->render('@SyliusInvoicingPlugin/Invoice/Download/pdf.html.twig', [
                 'invoice' => $invoice
         ]));
 
